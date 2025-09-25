@@ -53,3 +53,17 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+# Keil C51
+*.lst
+*.map
+*.obj
+*.hex
+*.axf
+*.dep
+*.bak
+
+# Output folders
+[Oo]utput/
+[Dd]ebug/
+
