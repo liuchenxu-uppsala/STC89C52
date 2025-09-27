@@ -5,3 +5,7 @@
 ![Dot Matrix Module Schematic](img/DotMatrixModuleSchematic.png)
 
 ![Ugly](img/ugly.jpg) 
+
+![PinFunction1](img/PinFunction1.png) 
+
+![PinFunction2](img/PinFunction2.png) 
