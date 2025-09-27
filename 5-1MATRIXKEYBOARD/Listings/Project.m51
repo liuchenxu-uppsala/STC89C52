@@ -1,0 +1,262 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        09/27/2025  10:19:20  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\main.obj, .\Objects\DigitalTubeShow.obj, .\Objects\Delay.obj TO .\Objects\Project 
+>> PRINT (.\Listings\Project.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\main.obj (MAIN)
+  .\Objects\DigitalTubeShow.obj (DIGITALTUBESHOW)
+  .\Objects\Delay.obj (DELAY)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?SLCMP)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  .\Objects\Project (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0012H     UNIT         ?DT?DIGITALTUBESHOW
+            DATA    001AH     0005H     UNIT         ?DT?MAIN
+            DATA    001FH     0005H     UNIT         _DATA_GROUP_
+            DATA    0024H     0001H     UNIT         ?DT?_COMPUTERESULT?MAIN
+            IDATA   0025H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     008CH     UNIT         ?C_C51STARTUP
+            CODE    008FH     004DH     UNIT         ?PR?DETECT_COLUMN?MAIN
+            CODE    00DCH     004CH     UNIT         ?PR?DETECT_ROW?MAIN
+            CODE    0128H     004BH     UNIT         ?PR?MAIN?MAIN
+            CODE    0173H     0039H     UNIT         ?PR?_DELAY?DELAY
+            CODE    01ACH     0028H     UNIT         ?PR?_COMPUTERESULT?MAIN
+            CODE    01D4H     0021H     UNIT         ?PR?_SHOWNUMBER?DIGITALTUBESHOW
+            CODE    01F5H     001AH     UNIT         ?C_INITSEG
+            CODE    020FH     0016H     UNIT         ?C?LIB_CODE
+            CODE    0225H     0009H     UNIT         ?PR?DELAY1MS?DELAY
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\Project (MAIN)
+
+
+SEGMENT                                   DATA_GROUP 
+  +--> CALLED SEGMENT                   START    LENGTH
+-------------------------------------------------------
+?C_C51STARTUP                           -----    -----
+  +--> ?PR?MAIN?MAIN
+  +--> ?C_INITSEG
+
+?PR?MAIN?MAIN                           -----    -----
+  +--> ?PR?DETECT_ROW?MAIN
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/27/2025  10:19:20  PAGE 2
+
+
+  +--> ?PR?DETECT_COLUMN?MAIN
+  +--> ?PR?_SHOWNUMBER?DIGITALTUBESHOW
+  +--> ?PR?_DELAY?DELAY
+
+?PR?DETECT_ROW?MAIN                     001FH    0001H
+  +--> ?PR?_DELAY?DELAY
+
+?PR?_DELAY?DELAY                        0020H    0004H
+  +--> ?PR?DELAY1MS?DELAY
+
+?PR?DETECT_COLUMN?MAIN                  001FH    0001H
+  +--> ?PR?_DELAY?DELAY
+
+?PR?_SHOWNUMBER?DIGITALTUBESHOW         -----    -----
+  +--> ?PR?_DELAY?DELAY
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\Project (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00B0H         PUBLIC        P3
+  C:01ACH         PUBLIC        _computeResult
+  D:001AH         PUBLIC        result_column
+  C:0128H         PUBLIC        main
+  D:001BH         PUBLIC        display_row
+  D:001CH         PUBLIC        init
+  C:00DCH         PUBLIC        detect_row
+  D:001DH         PUBLIC        result_row
+  D:001EH         PUBLIC        display_column
+  C:008FH         PUBLIC        detect_column
+  -------         PROC          MAIN
+  C:0128H         LINE#         16
+  C:0128H         LINE#         17
+  C:0128H         LINE#         18
+  C:012DH         LINE#         19
+  C:0132H         LINE#         20
+  C:0140H         LINE#         21
+  C:0145H         LINE#         22
+  C:014AH         LINE#         23
+  C:014AH         LINE#         24
+  C:014EH         LINE#         25
+  C:0154H         LINE#         26
+  C:015FH         LINE#         27
+  C:0166H         LINE#         28
+  C:0171H         LINE#         29
+  C:0171H         LINE#         30
+  -------         ENDPROC       MAIN
+  -------         PROC          DETECT_COLUMN
+  -------         DO            
+  D:001FH         SYMBOL        column
+  -------         ENDDO         
+  C:008FH         LINE#         33
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/27/2025  10:19:20  PAGE 3
+
+
+  C:008FH         LINE#         34
+  C:0092H         LINE#         35
+  C:0095H         LINE#         36
+  C:009BH         LINE#         37
+  C:00A6H         LINE#         38
+  C:00ACH         LINE#         39
+  C:00AFH         LINE#         40
+  C:00C2H         LINE#         41
+  C:00C2H         LINE#         42
+  C:00C5H         LINE#         43
+  C:00C7H         LINE#         44
+  C:00C7H         LINE#         45
+  C:00CAH         LINE#         46
+  C:00CCH         LINE#         47
+  C:00CCH         LINE#         48
+  C:00CFH         LINE#         49
+  C:00D1H         LINE#         50
+  C:00D1H         LINE#         51
+  C:00D4H         LINE#         52
+  C:00D6H         LINE#         53
+  C:00D6H         LINE#         54
+  C:00D9H         LINE#         55
+  C:00D9H         LINE#         56
+  C:00D9H         LINE#         57
+  C:00D9H         LINE#         58
+  C:00DBH         LINE#         59
+  -------         ENDPROC       DETECT_COLUMN
+  -------         PROC          DETECT_ROW
+  -------         DO            
+  D:001FH         SYMBOL        row
+  -------         ENDDO         
+  C:00DCH         LINE#         61
+  C:00DCH         LINE#         62
+  C:00DFH         LINE#         63
+  C:00E2H         LINE#         64
+  C:00E8H         LINE#         65
+  C:00F3H         LINE#         66
+  C:00F9H         LINE#         67
+  C:00FCH         LINE#         68
+  C:010EH         LINE#         69
+  C:010EH         LINE#         70
+  C:0111H         LINE#         71
+  C:0113H         LINE#         72
+  C:0113H         LINE#         73
+  C:0116H         LINE#         74
+  C:0118H         LINE#         75
+  C:0118H         LINE#         76
+  C:011BH         LINE#         77
+  C:011DH         LINE#         78
+  C:011DH         LINE#         79
+  C:0120H         LINE#         80
+  C:0122H         LINE#         81
+  C:0122H         LINE#         82
+  C:0125H         LINE#         83
+  C:0125H         LINE#         84
+  C:0125H         LINE#         85
+  C:0125H         LINE#         86
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/27/2025  10:19:20  PAGE 4
+
+
+  C:0127H         LINE#         87
+  -------         ENDPROC       DETECT_ROW
+  -------         PROC          _COMPUTERESULT
+  D:0024H         SYMBOL        column
+  D:0005H         SYMBOL        row
+  C:01ACH         LINE#         89
+  C:01AEH         LINE#         90
+  C:01B7H         LINE#         91
+  C:01BFH         LINE#         92
+  C:01CAH         LINE#         93
+  C:01D3H         LINE#         94
+  C:01D3H         LINE#         95
+  -------         ENDPROC       _COMPUTERESULT
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        DIGITALTUBESHOW
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  B:00A0H.6       PUBLIC        P2_6
+  B:00A0H.7       PUBLIC        P2_7
+  C:01D4H         PUBLIC        _showNumber
+  D:0008H         PUBLIC        nums
+  D:0012H         PUBLIC        positions
+  -------         PROC          _SHOWNUMBER
+  D:0007H         SYMBOL        position
+  D:0005H         SYMBOL        num
+  C:01D4H         LINE#         6
+  C:01D4H         LINE#         7
+  C:01D6H         LINE#         8
+  C:01DDH         LINE#         9
+  C:01DFH         LINE#         10
+  C:01E1H         LINE#         11
+  C:01E8H         LINE#         12
+  C:01EAH         LINE#         13
+  -------         ENDPROC       _SHOWNUMBER
+  -------         ENDMOD        DIGITALTUBESHOW
+
+  -------         MODULE        DELAY
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:0173H         PUBLIC        _delay
+  C:0225H         PUBLIC        delay1ms
+  -------         PROC          DELAY1MS
+  -------         DO            
+  D:0007H         SYMBOL        i
+  D:0006H         SYMBOL        j
+  -------         ENDDO         
+  C:0225H         LINE#         1
+  C:0225H         LINE#         2
+  C:0225H         LINE#         4
+  C:0227H         LINE#         5
+  C:0229H         LINE#         7
+  C:0229H         LINE#         8
+  C:022BH         LINE#         9
+  C:022DH         LINE#         10
+  -------         ENDPROC       DELAY1MS
+  -------         PROC          _DELAY
+  D:0020H         SYMBOL        times
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/27/2025  10:19:20  PAGE 5
+
+
+  C:0173H         LINE#         13
+  C:017BH         LINE#         14
+  C:018EH         LINE#         15
+  C:0191H         LINE#         16
+  C:01A9H         LINE#         17
+  C:01ABH         LINE#         18
+  -------         ENDPROC       _DELAY
+  -------         ENDMOD        DELAY
+
+  -------         MODULE        ?C?SLCMP
+  C:020FH         PUBLIC        ?C?SLCMP
+  -------         ENDMOD        ?C?SLCMP
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_COMPUTERESULT?MAIN
+
+Program Size: data=38.0 xdata=0 code=558
+LINK/LOCATE RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
