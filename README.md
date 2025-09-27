@@ -2,4 +2,6 @@
 
 ![74HC595](img/74HC595.png) 
 
-![Dot Matrix Module Schematic](img/DotMatrixModuleSchematic.png) 
+![Dot Matrix Module Schematic](img/DotMatrixModuleSchematic.png)
+
+![Ugly](img/ugly.jpg) 
