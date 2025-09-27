@@ -1,0 +1,191 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        09/27/2025  20:09:15  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\main.obj TO .\Objects\Project PRINT (.\Listings\Project.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\main.obj (MAIN)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?SLCMP)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  .\Objects\Project (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0052H     UNIT         ?DT?MAIN
+            DATA    005AH     0004H     UNIT         ?DT?_DELAY?MAIN
+            IDATA   005EH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     00A2H     UNIT         ?PR?MAIN?MAIN
+            CODE    00A5H     008CH     UNIT         ?C_C51STARTUP
+            CODE    0131H     005FH     UNIT         ?C_INITSEG
+            CODE    0190H     0039H     UNIT         ?PR?_DELAY?MAIN
+            CODE    01C9H     0016H     UNIT         ?C?LIB_CODE
+            CODE    01DFH     000FH     UNIT         ?PR?UPDATECLK?MAIN
+            CODE    01EEH     000CH     UNIT         ?PR?DELAY1MS?MAIN
+            CODE    01FAH     0006H     UNIT         ?PR?_SUBMITBITDI?MAIN
+            CODE    0200H     0005H     UNIT         ?PR?FLUSHDATA?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\Project (MAIN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?MAIN
+  +--> ?C_INITSEG
+
+?PR?MAIN?MAIN
+  +--> ?PR?UPDATECLK?MAIN
+  +--> ?PR?DELAY1MS?MAIN
+  +--> ?PR?FLUSHDATA?MAIN
+
+?PR?UPDATECLK?MAIN
+  +--> ?PR?_SUBMITBITDI?MAIN
+
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/27/2025  20:09:15  PAGE 2
+
+
+?PR?DELAY1MS?MAIN
+  +--> ?PR?FLUSHDATA?MAIN
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\Project (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:0190H         PUBLIC        _delay
+  B:00B0H.4       PUBLIC        P3_4
+  B:00B0H.5       PUBLIC        P3_5
+  B:00B0H.6       PUBLIC        P3_6
+  D:0008H         PUBLIC        index
+  C:0200H         PUBLIC        flushData
+  C:01F1H         PUBLIC        delay1ms
+  C:0003H         PUBLIC        main
+  D:000AH         PUBLIC        secondArr
+  D:001AH         PUBLIC        fifthArr
+  D:002AH         PUBLIC        fourthArr
+  D:003AH         PUBLIC        thirdArr
+  C:01FAH         PUBLIC        _submitBitDI
+  D:004AH         PUBLIC        firstArr
+  C:01E7H         PUBLIC        updateCLK
+  -------         PROC          L?0038
+  -------         ENDPROC       L?0038
+  -------         PROC          DELAY1MS
+  -------         DO            
+  D:0007H         SYMBOL        i
+  D:0006H         SYMBOL        j
+  -------         ENDDO         
+  C:01F1H         LINE#         3
+  C:01F1H         LINE#         4
+  C:01F1H         LINE#         6
+  C:01F3H         LINE#         7
+  C:01F5H         LINE#         9
+  C:01F5H         LINE#         10
+  C:01F7H         LINE#         11
+  C:01F9H         LINE#         12
+  -------         ENDPROC       DELAY1MS
+  -------         PROC          _DELAY
+  D:005AH         SYMBOL        times
+  C:0190H         LINE#         15
+  C:0198H         LINE#         16
+  C:01ABH         LINE#         17
+  C:01AEH         LINE#         18
+  C:01C6H         LINE#         19
+  C:01C8H         LINE#         20
+  -------         ENDPROC       _DELAY
+  C:01DFH         SYMBOL        L?0037
+  -------         PROC          L?0036
+  -------         ENDPROC       L?0036
+  C:01DFH         SYMBOL        L?0037
+  -------         PROC          UPDATECLK
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/27/2025  20:09:15  PAGE 3
+
+
+  C:01E7H         LINE#         36
+  C:01E7H         LINE#         37
+  C:01E9H         LINE#         38
+  C:01EBH         LINE#         39
+  C:01EDH         LINE#         40
+  -------         ENDPROC       UPDATECLK
+  -------         PROC          _SUBMITBITDI
+  D:0007H         SYMBOL        b
+  C:01FAH         LINE#         42
+  C:01FAH         LINE#         43
+  C:01FFH         LINE#         44
+  -------         ENDPROC       _SUBMITBITDI
+  -------         PROC          FLUSHDATA
+  C:0200H         LINE#         46
+  C:0200H         LINE#         47
+  C:0202H         LINE#         48
+  C:0204H         LINE#         49
+  -------         ENDPROC       FLUSHDATA
+  -------         PROC          MAIN
+  C:0003H         LINE#         51
+  C:0003H         LINE#         52
+  C:0003H         LINE#         53
+  C:0008H         LINE#         54
+  C:000AH         LINE#         55
+  C:000DH         LINE#         56
+  C:001EH         LINE#         57
+  C:001EH         LINE#         58
+  C:0021H         LINE#         60
+  C:0026H         LINE#         61
+  C:0028H         LINE#         62
+  C:002BH         LINE#         63
+  C:003CH         LINE#         64
+  C:003CH         LINE#         65
+  C:003FH         LINE#         68
+  C:0044H         LINE#         69
+  C:0046H         LINE#         70
+  C:0049H         LINE#         71
+  C:005AH         LINE#         72
+  C:005DH         LINE#         73
+  C:0060H         LINE#         75
+  C:0065H         LINE#         76
+  C:0067H         LINE#         77
+  C:006AH         LINE#         78
+  C:007BH         LINE#         79
+  C:007EH         LINE#         80
+  C:0081H         LINE#         82
+  C:0086H         LINE#         83
+  C:0088H         LINE#         84
+  C:008BH         LINE#         85
+  C:009CH         LINE#         86
+  C:009FH         LINE#         87
+  C:00A2H         LINE#         88
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        ?C?SLCMP
+  C:01C9H         PUBLIC        ?C?SLCMP
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/27/2025  20:09:15  PAGE 4
+
+
+  -------         ENDMOD        ?C?SLCMP
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?MAIN
+
+Program Size: data=95.0 xdata=0 code=517
+LINK/LOCATE RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
