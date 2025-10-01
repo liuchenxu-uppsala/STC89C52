@@ -10,4 +10,10 @@
 
 ![PinFunction2](img/PinFunction2.png) 
 
-![InterruptSystem](img/interrupt.png) 
+![InterruptSystem](img/interrupt.png)
+
+![Signals](img/signals.png) 
+
+![writedata](img/writedata.png) 
+
+![readdata](img/readdata.png) 
